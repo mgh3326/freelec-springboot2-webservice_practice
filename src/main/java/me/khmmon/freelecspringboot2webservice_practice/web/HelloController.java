@@ -1,6 +1,6 @@
-package me.khmmon.freelecspringboot2webservice_practice;
+package me.khmmon.freelecspringboot2webservice_practice.web;
 
-import me.khmmon.freelecspringboot2webservice_practice.dto.HelloResponseDto;
+import me.khmmon.freelecspringboot2webservice_practice.web.dto.HelloResponseDto;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

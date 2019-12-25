@@ -1,4 +1,4 @@
-package me.khmmon.freelecspringboot2webservice_practice.dto;
+package me.khmmon.freelecspringboot2webservice_practice.web.dto;
 
 import org.junit.Test;
 

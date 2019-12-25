@@ -2,12 +2,14 @@ package me.khmmon.freelecspringboot2webservice_practice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
+@EnableJpaAuditing // JPA Auditing 활성화
 @SpringBootApplication
-public class FreelecSpringboot2WebservicePracticeApplication {
+public class Application {
 
   public static void main(String[] args) {
-    SpringApplication.run(FreelecSpringboot2WebservicePracticeApplication.class, args);
+    SpringApplication.run(Application.class, args);
   }
 
 }
