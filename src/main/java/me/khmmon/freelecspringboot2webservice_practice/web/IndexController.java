@@ -1,6 +1,8 @@
 package me.khmmon.freelecspringboot2webservice_practice.web;
 
 import lombok.RequiredArgsConstructor;
+import me.khmmon.freelecspringboot2webservice_practice.config.auth.LoginUser;
+import me.khmmon.freelecspringboot2webservice_practice.config.auth.dto.SessionUser;
 import me.khmmon.freelecspringboot2webservice_practice.service.posts.PostsService;
 import me.khmmon.freelecspringboot2webservice_practice.web.dto.PostsResponseDto;
 import org.springframework.stereotype.Controller;
@@ -14,8 +16,11 @@ public class IndexController {
   private final PostsService postsService;
 
   @GetMapping("/")
-  public String index(Model model) {
+  public String index(Model model, @LoginUser SessionUser user) {
     model.addAttribute("posts", postsService.findAllDesc());
+    if (user != null) {
+      model.addAttribute("userName", user.getName());
+    }
     return "index";
   }
 
